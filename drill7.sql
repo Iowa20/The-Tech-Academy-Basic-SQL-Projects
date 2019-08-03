@@ -1,6 +1,6 @@
 
 
-
+USE [db_drill7]
 
 CREATE TABLE JiuJitsu_specialist (
 bjj_id INT PRIMARY KEY not NULL IDENTITY (1,1),
