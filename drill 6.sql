@@ -7,3 +7,4 @@ WHERE specialist_id = 3;
 
 SELECT * FROM tbl_specialist
 SELECT * FROM tbl_species
+SELECT * FROM tbl_care
