@@ -32,10 +32,9 @@ VALUES
 
 
 
-SELECT bjj_id, bjj_lastname, bjj_firstname,
-academy_name, technique_name
+SELECT *
 FROM JiuJitsu_specialist 
-FULL OUTER JOIN Bjj_academy 
+FULL JOIN Bjj_academy 
 ON bjj_firstname = academy_name;
 
 
