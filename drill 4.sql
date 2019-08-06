@@ -6,7 +6,8 @@ FROM tbl_species
 INNER JOIN tbl_nutrition
 ON
 tbl_nutrition.nutrition_id = tbl_species.species_nutrition
-WHERE nutrition_id BETWEEN 2202 and 2206;
+WHERE nutrition_id BETWEEN 2202 and 2206
+ORDER BY  nutrition_id ASC;
 
 SELECT * FROM tbl_species;
 SELECT * FROM tbl_nutrition;
