@@ -35,6 +35,4 @@ VALUES
 SELECT *
 FROM JiuJitsu_specialist 
 FULL JOIN Bjj_academy 
-ON bjj_firstname = academy_name;
-
-
+ON JiuJitsu_specialist.bjj_id = Bjj_academy.bjj_id;
