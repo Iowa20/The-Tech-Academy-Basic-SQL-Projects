@@ -20,7 +20,11 @@ VALUES
 
 CREATE TABLE Bjj_academy (
 academy_name VARCHAR(50) not null,
-technique_name VARCHAR(50) not NULL);
+technique_name VARCHAR(50) not NULL,
+bjj_id INT,
+PRIMARY KEY (academy_name),
+FOREIGN KEY (bjj_id) REFERENCES JiuJitsu_specialist(bjj_id)
+);
 
 INSERT INTO Bjj_academy
 (academy_name, technique_name)
@@ -36,3 +40,6 @@ SELECT *
 FROM JiuJitsu_specialist 
 FULL JOIN Bjj_academy 
 ON JiuJitsu_specialist.bjj_id = Bjj_academy.bjj_id;
+
+SELECT * FROM JiuJitsu_specialist; 
+SELECt * FROM Bjj_academy;
