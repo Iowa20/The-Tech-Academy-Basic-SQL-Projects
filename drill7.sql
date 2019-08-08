@@ -26,19 +26,22 @@ PRIMARY KEY (academy_name),
 FOREIGN KEY (bjj_id) REFERENCES JiuJitsu_specialist(bjj_id)
 );
 
+
+
+
 INSERT INTO Bjj_academy
-(academy_name, technique_name)
+(academy_name, technique_name, bjj_id)
 VALUES
-('MG Academy','Butterfly Guard'),
-('Jiu Jitsu University','Uchi Mata'),
-('Atos', 'Rear Naked Choke'),
-('10th Planet BJJ', 'Electric chair');
+('10th Planet BJJ','Electric Chair','1'),
+('Atos','Closed Guard','2'),
+('Jiu Jitsu University', 'Uchi Mata', '3'),
+('MG Academy', 'Butterfly Guard', '4');
 
 
 
-SELECT *
+SELECT  bjj_lastname, academy_name, technique_name
 FROM JiuJitsu_specialist 
-FULL JOIN Bjj_academy 
+INNER JOIN Bjj_academy 
 ON JiuJitsu_specialist.bjj_id = Bjj_academy.bjj_id;
 
 SELECT * FROM JiuJitsu_specialist; 
